@@ -1,3 +1,4 @@
 # chenziyangc.github.io
-Editor project
+**Editor project**
+
 Powered by Tiny
