@@ -1,2 +1,3 @@
-# chenziyang1.github.io
-Take advantage of Github Pages's blogging project
+# chenziyangc.github.io
+Editor project
+Powered by Tiny
