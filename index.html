@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
+    <title>The editor</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tiny.cloud/1/0qsp0e6bssioebksvpn7zktgcp285rrryjoqakjf82n5juj9/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
@@ -25,14 +26,21 @@
       <textarea id="default">
         Welcome use!
       </textarea>
+      <script>
+        function gettime(){
+          var date=new Date();
+          var time=date.toLocaleString();
+          document.getElementById("datetime").innerHTML =time;
+        }
+        setInterval("gettime();",1000);
+      </script>
 </head>
-<body>
-    <title>The editor</title>
+<body onload=gettime()>
     <div id="footer" style="background-color:#ffffff;clear:both;text-align:center;">
-      Powered by Tiny | The editor V1.1 
+      <pre>Powered by Tiny | The editor V1.1</pre> 
     </div>
-    <div id="footer" style="background-color:#ffffff;clear:both;text-align:center;">
-      Powered by Tiny | The editor V1.1 
+    <div id="time" style="background-color:#ffffff;clear:both;text-align:center;">
+      
     </div>
 </body>
 </html>
