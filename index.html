@@ -26,21 +26,29 @@
       <textarea id="default">
         Welcome use!
       </textarea>
-      <script>
-        function gettime(){
-          var date=new Date();
-          var time=date.toLocaleString();
-          document.getElementById("datetime").innerHTML =time;
-        }
-        setInterval("gettime();",1000);
-      </script>
 </head>
 <body onload=gettime()>
     <div id="footer" style="background-color:#ffffff;clear:both;text-align:center;">
       <pre>Powered by Tiny | The editor V1.1</pre> 
     </div>
     <div id="time" style="background-color:#ffffff;clear:both;text-align:center;">
-      gettime();
     </div>
+    <script type="text/javascript">
+      function time(){
+      var vWeek,vWeek_s,vDay;
+      vWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var date =  new Date();
+      year = date.getFullYear();
+      month = date.getMonth() + 1;
+      day = date.getDate();
+      hours = date.getHours();
+      minutes = date.getMinutes();
+      seconds = date.getSeconds();
+      vWeek_s = date.getDay();
+      document.getElementById("time").innerHTML = year + "年" + month + "月" + day + "日" + "\t" + hours + ":" + minutes +":" + seconds + "\t" + vWeek[vWeek_s] ;
+      
+      };
+      setInterval("time()",1000);
+    </script>
 </body>
 </html>
