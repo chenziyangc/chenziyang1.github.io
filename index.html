@@ -45,7 +45,7 @@
       minutes = date.getMinutes();
       seconds = date.getSeconds();
       vWeek_s = date.getDay();
-      document.getElementById("time").innerHTML = <pre> year + "/" + month + "/" + day + "\t" + hours + ":" + minutes +":" + seconds + "\t" + vWeek[vWeek_s] </pre>;
+      document.getElementById("time").innerHTML = year + "/" + month + "/" + day + "\t" + hours + ":" + minutes +":" + seconds + "\t" + vWeek[vWeek_s];
       
       };
       setInterval("time()",1000);
